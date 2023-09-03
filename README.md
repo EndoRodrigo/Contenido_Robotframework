@@ -18,6 +18,7 @@ Para instalar Robotframework puedes usar el administrador de paquetes PIP.
 ```console
 # Actualizar a la última versión estable
 $ pip install --upgrade robotframework
+$ pip install --upgrade robotframework-seleniumlibrary
 
 ---> 100%
 ```
@@ -38,14 +39,23 @@ $ python -m venv env
 $ env\Scripts\activate  --> Windows
 $ source env/bin/activate  --> Linux
 $ pip install -r dependencias.txt
-$ deactivate --> Un vez termine las activades del dia lo puede desactivar
+$ deactivate --> Un vez termine las activades del dia lo puede desactivar el entormo
 ---> 100%
 ```
+
+## Ejecucion
+Para ejecutar su primer test automatizado con robotframeworl es sencillo solo sigas lo siguientes pasos:
+    1. Asegurese de estar en la ruta correcta
+    2. Ejecite el siguiente coamdno
+```console
+$ cd test
+robot Ejercicio1.robot
+---
 
 ## Documentación interactiva de la API
 
 Mas sobre robotframework aqui aprendera con guías y ejemplos que cubren Robot Framework desde la instalación hasta el uso avanzado.
 
-```console
+```web
 https://docs.robotframework.org/
 ---
