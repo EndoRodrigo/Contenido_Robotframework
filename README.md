@@ -50,7 +50,7 @@ Para ejecutar su primer test automatizado con robotframeworl es sencillo solo si
 ```console
 $ cd test
 robot Ejercicio1.robot
----
+```
 
 ## Documentación interactiva de la API
 
@@ -58,4 +58,4 @@ Mas sobre robotframework aqui aprendera con guías y ejemplos que cubren Robot F
 
 ```web
 https://docs.robotframework.org/
----
+```
