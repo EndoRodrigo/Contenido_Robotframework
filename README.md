@@ -1,4 +1,4 @@
-<h1 align="center">Centenido Prcatico Robotframework</h1>
+<h1 align="center">Centenido Practico Robotframework</h1>
 <h3 align="center">Este proyecto esta construido con el fin de centralizar toda informacion que aprendizaje de robotframework</h3>
 
 ## Requirimientos para su uso
