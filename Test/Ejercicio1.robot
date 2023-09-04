@@ -1,6 +1,6 @@
 *** Settings ***
-Documentation     Simple example using SeleniumLibrary.
-Library           SeleniumLibrary
+Documentation    Simple example using SeleniumLibrary.
+Library        SeleniumLibrary
 
 *** Variables ***
 ${LOGIN URL}      file:///C:/Users/endor/OneDrive/Documentos/RobotContenido/Contenido/Pagina/index.html
@@ -13,12 +13,16 @@ Valid Login
     Input Password    password1
     Submit Credentials
     Welcome Page Should Be Open
-    [Teardown]    Close Browser
+    #[Teardown]    Close Browser
+
 
 *** Keywords ***
 Open Browser To Login Page
     Open Browser    ${LOGIN URL}    ${BROWSER}
     Title Should Be    Login
+    Set Selenium Implicit Wait    10 
+    Set Selenium Speed    5
+    
 
 Input Username
     [Arguments]    ${username}

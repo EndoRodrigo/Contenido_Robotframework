@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.5 on win32)" generated="20230903 20:04:44.037" rpa="false" schemaversion="4">
+<suite id="s1" name="Contenido" source="C:\Users\endor\OneDrive\Documentos\RobotContenido\Contenido">
+<suite id="s1-s1" name="Test" source="C:\Users\endor\OneDrive\Documentos\RobotContenido\Contenido\test">
+<suite id="s1-s1-s1" name="Ejercicio1" source="C:\Users\endor\OneDrive\Documentos\RobotContenido\Contenido\test\Ejercicio1.robot">
+<test id="s1-s1-s1-t1" name="Valid Login" line="10">
+<kw name="Open Browser To Login Page">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230903 20:04:44.207" level="INFO">Opening browser 'edge' to base url 'file:///C:/Users/endor/OneDrive/Documentos/RobotContenido/Contenido/Pagina/index.html'.</msg>
+<status status="PASS" starttime="20230903 20:04:44.207" endtime="20230903 20:04:45.568"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Login</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230903 20:04:45.574" level="INFO">Page title is 'Login'.</msg>
+<status status="PASS" starttime="20230903 20:04:45.568" endtime="20230903 20:04:45.574"/>
+</kw>
+<status status="PASS" starttime="20230903 20:04:44.206" endtime="20230903 20:04:45.575"/>
+</kw>
+<kw name="Input Username">
+<arg>user</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230903 20:04:45.576" level="INFO">Typing text 'user' into text field 'username'.</msg>
+<status status="PASS" starttime="20230903 20:04:45.575" endtime="20230903 20:04:45.649"/>
+</kw>
+<status status="PASS" starttime="20230903 20:04:45.575" endtime="20230903 20:04:45.650"/>
+</kw>
+<kw name="Input Password">
+<arg>password1</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230903 20:04:45.652" level="INFO">Typing text 'password1' into text field 'password'.</msg>
+<status status="PASS" starttime="20230903 20:04:45.651" endtime="20230903 20:04:45.707"/>
+</kw>
+<status status="PASS" starttime="20230903 20:04:45.650" endtime="20230903 20:04:45.707"/>
+</kw>
+<kw name="Submit Credentials">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>btnenviar</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230903 20:04:45.708" level="INFO">Clicking button 'btnenviar'.</msg>
+<status status="PASS" starttime="20230903 20:04:45.707" endtime="20230903 20:04:45.775"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230903 20:04:48.776" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230903 20:04:45.775" endtime="20230903 20:04:48.776"/>
+</kw>
+<status status="PASS" starttime="20230903 20:04:45.707" endtime="20230903 20:04:48.776"/>
+</kw>
+<kw name="Welcome Page Should Be Open">
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${respuesta}</var>
+<arg>xpath=/html/body/h1</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230903 20:04:48.796" level="INFO">${respuesta} = login realizado con exito</msg>
+<status status="PASS" starttime="20230903 20:04:48.777" endtime="20230903 20:04:48.796"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${respuesta}</arg>
+<arg>login realizado con exito</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20230903 20:04:48.796" endtime="20230903 20:04:48.797"/>
+</kw>
+<status status="PASS" starttime="20230903 20:04:48.777" endtime="20230903 20:04:48.797"/>
+</kw>
+<status status="PASS" starttime="20230903 20:04:44.206" endtime="20230903 20:04:48.797"/>
+</test>
+<doc>Simple example using SeleniumLibrary.</doc>
+<status status="PASS" starttime="20230903 20:04:44.071" endtime="20230903 20:04:48.799"/>
+</suite>
+<status status="PASS" starttime="20230903 20:04:44.069" endtime="20230903 20:04:48.800"/>
+</suite>
+<status status="PASS" starttime="20230903 20:04:44.053" endtime="20230903 20:04:48.801"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Contenido">Contenido</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Test">Contenido.Test</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Ejercicio1">Contenido.Test.Ejercicio1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
