@@ -7,8 +7,12 @@ ${navegador}    chrome
 
 
 *** Test Cases ***
-Validacion de campos
+Validacion de campos usuario
     Hacer clic sobre el boton iniciar sesion
+
+Hacer clic sobre el boton iniciar sesion dos
+    Hacer clic sobre el boton iniciar sesion
+
 
 
 
@@ -16,3 +20,7 @@ Validacion de campos
 Hacer clic sobre el boton iniciar sesion
     Click Button    btnenviar
     Page Should Contain    Por favor, ingresa un usuario.
+
+Hacer clic sobre el boton iniciar sesion dos
+    Click Button    btnenviar
+    Page Should Contain    Por favor, ingresa una contraseña.
