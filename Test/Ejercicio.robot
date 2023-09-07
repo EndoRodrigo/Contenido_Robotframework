@@ -11,6 +11,10 @@ Validacion de campos
     Abrir el navegador con al direccion correcta
     Hacer clic sobre el boton iniciar sesion
 
+Hacer clic sobre el boton iniciar sesion dos
+    Hacer clic sobre el boton iniciar sesion
+
+
 
 
 *** Keywords ***
@@ -22,3 +26,7 @@ Abrir el navegador con al direccion correcta
 Hacer clic sobre el boton iniciar sesion
     Click Button    btnenviar
     Page Should Contain    Por favor, ingresa un usuario.
+
+Hacer clic sobre el boton iniciar sesion dos
+    Click Button    btnenviar
+    Page Should Contain    Por favor, ingresa una contraseña.
