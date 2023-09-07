@@ -7,7 +7,7 @@ ${LOGIN URL}      file:///C:/Users/endor/OneDrive/Documentos/RobotContenido/Cont
 ${BROWSER}        edge
 
 *** Test Cases ***
-Valid Login
+Valid Login de login con credenciales correctas
     Open Browser To Login Page
     Input Username    user
     Input Password    password1
