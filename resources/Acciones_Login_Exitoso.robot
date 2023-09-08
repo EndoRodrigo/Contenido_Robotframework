@@ -23,7 +23,6 @@ Ingresar las la informacion del contraseña
     Element Should Be Visible    password
     Element Should Be Enabled    password
     Input Password    password    password1
-    
 
 Hacer clic sobre el boton iniciar sesion 
     Click Button    btnenviar
