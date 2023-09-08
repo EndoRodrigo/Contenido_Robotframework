@@ -1,113 +1,106 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.11.5 on win32)" generated="20230907 21:32:48.810" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.11.5 on win32)" generated="20230907 22:00:10.299" rpa="false" schemaversion="4">
 <suite id="s1" name="Contenido" source="C:\Users\endor\OneDrive\Documentos\RobotContenido\Contenido">
 <suite id="s1-s1" name="Test" source="C:\Users\endor\OneDrive\Documentos\RobotContenido\Contenido\test">
 <suite id="s1-s1-s1" name="Login" source="C:\Users\endor\OneDrive\Documentos\RobotContenido\Contenido\test\Login.robot">
-<test id="s1-s1-s1-t1" name="Iniciar sesión con credenciales válidas" line="8">
-<kw name="Ingresar a la url del portal para verificacion de credenciales" library="Acciones_Login">
+<test id="s1-s1-s1-t1" name="Iniciar sesión con credenciales inválidas" line="15">
+<kw name="Ingresar a la url del portal para verificacion de credenciales actuales" library="Acciones_Login_Fallido">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${url}</arg>
 <arg>${navegador}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230907 21:32:48.981" level="INFO">Opening browser 'edge' to base url 'file:///C:/Users/endor/OneDrive/Documentos/RobotContenido/Contenido/pagina/index.html'.</msg>
-<status status="PASS" starttime="20230907 21:32:48.980" endtime="20230907 21:32:50.249"/>
+<msg timestamp="20230907 22:00:10.480" level="INFO">Opening browser 'edge' to base url 'file:///C:/Users/endor/OneDrive/Documentos/RobotContenido/Contenido/pagina/index.html'.</msg>
+<status status="PASS" starttime="20230907 22:00:10.480" endtime="20230907 22:00:11.716"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230907 21:32:50.250" endtime="20230907 21:32:50.361"/>
+<status status="PASS" starttime="20230907 22:00:11.717" endtime="20230907 22:00:11.830"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
-<arg>10</arg>
+<arg>5s</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20230907 21:32:50.361" endtime="20230907 21:32:50.363"/>
+<status status="PASS" starttime="20230907 22:00:11.832" endtime="20230907 22:00:11.833"/>
 </kw>
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
-<arg>3</arg>
+<arg>3s</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20230907 21:32:50.363" endtime="20230907 21:32:50.363"/>
+<status status="PASS" starttime="20230907 22:00:11.834" endtime="20230907 22:00:11.834"/>
 </kw>
-<status status="PASS" starttime="20230907 21:32:48.980" endtime="20230907 21:32:50.363"/>
+<status status="PASS" starttime="20230907 22:00:10.479" endtime="20230907 22:00:11.834"/>
 </kw>
-<kw name="Ingresar las la informacion del usuario" library="Acciones_Login">
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>username</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20230907 21:32:56.432" level="INFO">Element 'username' is displayed.</msg>
-<status status="PASS" starttime="20230907 21:32:50.364" endtime="20230907 21:32:56.432"/>
+<kw name="Verificar que el campo usuario sea obligatorio" library="Acciones_Login_Fallido">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>btnenviar</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230907 22:00:11.836" level="INFO">Clicking button 'btnenviar'.</msg>
+<status status="PASS" starttime="20230907 22:00:11.835" endtime="20230907 22:00:28.921"/>
 </kw>
-<kw name="Element Should Be Enabled" library="SeleniumLibrary">
-<arg>username</arg>
-<doc>Verifies that element identified by ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20230907 21:32:56.432" endtime="20230907 21:33:05.457"/>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Por favor, ingresa un usuario.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230907 22:00:34.932" level="INFO">Current page contains text 'Por favor, ingresa un usuario.'.</msg>
+<status status="PASS" starttime="20230907 22:00:28.921" endtime="20230907 22:00:34.932"/>
 </kw>
-<kw name="Input Password" library="SeleniumLibrary">
+<kw name="Input Text" library="SeleniumLibrary">
 <arg>username</arg>
 <arg>user</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20230907 21:33:05.458" level="INFO">Typing password into text field 'username'.</msg>
-<msg timestamp="20230907 21:33:11.487" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20230907 21:33:14.522" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20230907 21:33:05.457" endtime="20230907 21:33:14.522"/>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230907 22:00:34.933" level="INFO">Typing text 'user' into text field 'username'.</msg>
+<status status="PASS" starttime="20230907 22:00:34.932" endtime="20230907 22:00:43.998"/>
 </kw>
-<status status="PASS" starttime="20230907 21:32:50.364" endtime="20230907 21:33:14.522"/>
+<status status="PASS" starttime="20230907 22:00:11.835" endtime="20230907 22:00:43.998"/>
 </kw>
-<kw name="Ingresar las la informacion del contraseña" library="Acciones_Login">
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>password</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20230907 21:33:20.540" level="INFO">Element 'password' is displayed.</msg>
-<status status="PASS" starttime="20230907 21:33:14.523" endtime="20230907 21:33:20.540"/>
+<kw name="Verificar que el campo contraseña sea obligatorio" library="Acciones_Login_Fallido">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>btnenviar</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230907 22:00:43.999" level="INFO">Clicking button 'btnenviar'.</msg>
+<status status="PASS" starttime="20230907 22:00:43.999" endtime="20230907 22:01:01.063"/>
 </kw>
-<kw name="Element Should Be Enabled" library="SeleniumLibrary">
-<arg>password</arg>
-<doc>Verifies that element identified by ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20230907 21:33:20.540" endtime="20230907 21:33:29.560"/>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Por favor, ingresa una contraseña.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230907 22:01:07.074" level="INFO">Current page contains text 'Por favor, ingresa una contraseña.'.</msg>
+<status status="PASS" starttime="20230907 22:01:01.063" endtime="20230907 22:01:07.074"/>
 </kw>
 <kw name="Input Password" library="SeleniumLibrary">
 <arg>password</arg>
 <arg>password1</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20230907 21:33:29.560" level="INFO">Typing password into text field 'password'.</msg>
-<msg timestamp="20230907 21:33:35.580" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20230907 21:33:38.611" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20230907 21:33:29.560" endtime="20230907 21:33:38.611"/>
+<msg timestamp="20230907 22:01:07.075" level="INFO">Typing password into text field 'password'.</msg>
+<msg timestamp="20230907 22:01:13.098" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230907 22:01:16.126" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230907 22:01:07.074" endtime="20230907 22:01:16.126"/>
 </kw>
-<status status="PASS" starttime="20230907 21:33:14.522" endtime="20230907 21:33:38.611"/>
+<status status="PASS" starttime="20230907 22:00:43.998" endtime="20230907 22:01:16.126"/>
 </kw>
-<kw name="Hacer clic sobre el boton iniciar sesion" library="Acciones_Login">
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>btnenviar</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20230907 21:33:38.613" level="INFO">Clicking button 'btnenviar'.</msg>
-<status status="PASS" starttime="20230907 21:33:38.612" endtime="20230907 21:34:00.702"/>
+<kw name="Hacer clic sobre el boton iniciar sesion">
+<msg timestamp="20230907 22:01:16.127" level="FAIL">Multiple keywords with name 'Hacer clic sobre el boton iniciar sesion' found. Give the full name of the keyword you want to use:
+    Acciones_Login_Exitoso.Hacer clic sobre el boton iniciar sesion
+    Acciones_Login_Fallido.Hacer clic sobre el boton iniciar sesion</msg>
+<status status="FAIL" starttime="20230907 22:01:16.127" endtime="20230907 22:01:16.128"/>
 </kw>
-<kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>login realizado con exito</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20230907 21:34:06.713" level="INFO">Current page contains text 'login realizado con exito'.</msg>
-<status status="PASS" starttime="20230907 21:34:00.702" endtime="20230907 21:34:06.713"/>
-</kw>
-<status status="PASS" starttime="20230907 21:33:38.612" endtime="20230907 21:34:06.713"/>
-</kw>
-<status status="PASS" starttime="20230907 21:32:48.979" endtime="20230907 21:34:06.714"/>
+<status status="FAIL" starttime="20230907 22:00:10.479" endtime="20230907 22:01:16.128">Multiple keywords with name 'Hacer clic sobre el boton iniciar sesion' found. Give the full name of the keyword you want to use:
+    Acciones_Login_Exitoso.Hacer clic sobre el boton iniciar sesion
+    Acciones_Login_Fallido.Hacer clic sobre el boton iniciar sesion</status>
 </test>
 <doc>Simple example using SeleniumLibrary.</doc>
-<status status="PASS" starttime="20230907 21:32:48.836" endtime="20230907 21:34:06.715"/>
+<status status="FAIL" starttime="20230907 22:00:10.330" endtime="20230907 22:01:16.129"/>
 </suite>
-<status status="PASS" starttime="20230907 21:32:48.833" endtime="20230907 21:34:06.717"/>
+<status status="FAIL" starttime="20230907 22:00:10.328" endtime="20230907 22:01:16.131"/>
 </suite>
-<status status="PASS" starttime="20230907 21:32:48.816" endtime="20230907 21:34:06.718"/>
+<status status="FAIL" starttime="20230907 22:00:10.308" endtime="20230907 22:01:16.132"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Contenido">Contenido</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1" name="Test">Contenido.Test</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Login">Contenido.Test.Login</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Contenido">Contenido</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Test">Contenido.Test</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="Login">Contenido.Test.Login</stat>
 </suite>
 </statistics>
 <errors>
