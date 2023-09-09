@@ -1,5 +1,4 @@
 *** Settings ***
-Documentation    Simple example using SeleniumLibrary.
 Library        SeleniumLibrary
 Resource    ../resources/Acciones_Login_Exitoso.robot
 Resource    ../resources/Acciones_Login_Fallido.robot
@@ -16,6 +15,6 @@ Iniciar sesión con credenciales inválidas
     Ingresar a la url del portal para verificacion de credenciales actuales
     Verificar que el campo usuario sea obligatorio
     Verificar que el campo contraseña sea obligatorio
-    Hacer clic sobre el boton iniciar sesion
+    Hacer clic en el boton iniciar sesion
 
 
