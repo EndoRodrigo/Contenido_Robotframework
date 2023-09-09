@@ -1,5 +1,5 @@
 <h1 align="center">Centenido Practico Robotframework</h1>
-<h3 align="center">Este proyecto esta construido con el fin de centralizar toda informacion que aprendizaje de robotframework</h3>
+<h3 align="center">Robot Framework es una automatización basada en palabras clave extensible basada en Python marco para las pruebas de aceptación, el desarrollo guiado por pruebas de aceptación (ATDD), desarrollo impulsado por el comportamiento (BDD) y automatización robótica de procesos (RPA). Eso Se puede utilizar en entornos distribuidos y heterogéneos, donde la automatización requiere el uso de diferentes tecnologías e interfaces.</h3>
 
 ## Requirimientos para su uso
 Robot Framework se implementa con Python, por lo que debe tener Python instalado.
