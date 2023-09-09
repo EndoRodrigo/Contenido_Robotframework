@@ -11,8 +11,8 @@ ${navegador}    edge
 Ingresar a la url del portal para verificacion de credenciales
     Open Browser    ${url}    ${navegador}
     Maximize Browser Window
-    Set Selenium Implicit Wait    10
-    Set Selenium Speed    3
+    Set Selenium Implicit Wait    1.5s
+    Set Selenium Speed    .9s
 
 Ingresar las la informacion del usuario
     Element Should Be Visible    username
