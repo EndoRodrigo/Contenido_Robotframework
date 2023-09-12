@@ -8,8 +8,8 @@ f_navegador
     [Arguments]    ${url}    ${navegador}
     Open Browser    ${url}    ${navegador}
     Maximize Browser Window
-    Set Selenium Implicit Wait    1.5s
-    Set Selenium Speed    .9s
+    Set Selenium Implicit Wait    1s
+    Set Selenium Speed    .5s
 
 f_txt
     [Arguments]    ${self}    ${dato}
@@ -33,3 +33,9 @@ f_buton
     Element Should Be Visible    ${self}
     Click Button    ${self}
 
+f_get
+    [Arguments]    ${self}    ${mensaje}
+    Wait Until Element Is Visible    ${self}
+    Wait Until Element Is Enabled    ${self}
+    Element Should Be Visible    ${self}
+    Page Should Contain    ${mensaje}
