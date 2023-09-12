@@ -9,5 +9,6 @@ Iniciar sesión con credenciales validas
     Verificar que el campo usuario sea obligatorio
     Verificar que el campo contraseña sea obligatorio
     Hacer clic en el boton iniciar sesion
+    Si las credenciales ingresas con corectas permite el ingreso
 
 

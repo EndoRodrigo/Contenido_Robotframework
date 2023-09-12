@@ -17,9 +17,12 @@ Verificar que el campo usuario sea obligatorio
     f_txt    username    user
 
 Verificar que el campo contraseña sea obligatorio
-    f_pass    password     password   
+    f_pass    password     password1   
 
 Hacer clic en el boton iniciar sesion
     f_buton    btnenviar
+
+Si las credenciales ingresas con corectas permite el ingreso
+    f_get    msjexito    login realizado con exito
 
 
