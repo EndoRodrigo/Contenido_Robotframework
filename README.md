@@ -23,7 +23,7 @@ $ pip install --upgrade robotframework-seleniumlibrary
 ---> 100%
 ```
 
-## Clonar el repositorio
+## Clonar el repositorio TEST
 
 Para clonar este proyecto se requiere tener instalado Git y ejecutar el siguiente comando en la ruta donde va a tarbajar con el proyecto
 ```console
